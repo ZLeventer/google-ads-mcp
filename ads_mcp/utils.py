@@ -20,7 +20,7 @@ from typing import Any
 import proto
 import logging
 from google.ads.googleads.client import GoogleAdsClient
-from google.ads.googleads.v21.services.services.google_ads_service import (
+from google.ads.googleads.v23.services.services.google_ads_service import (
     GoogleAdsServiceClient,
 )
 
@@ -42,7 +42,7 @@ _READ_ONLY_ADS_SCOPE = "https://www.googleapis.com/auth/adwords"
 
 def _create_credentials() -> google.auth.credentials.Credentials:
     """Returns Application Default Credentials with read-only scope."""
-    (credentials, _) = google.auth.default(scopes=[_READ_ONLY_ADS_SCOPE])
+    credentials, _ = google.auth.default(scopes=[_READ_ONLY_ADS_SCOPE])
     return credentials
 
 
@@ -84,6 +84,10 @@ def get_googleads_service(serviceName: str) -> GoogleAdsServiceClient:
 
 def get_googleads_type(typeName: str):
     return _googleads_client.get_type(typeName)
+
+
+def get_googleads_client():
+    return _googleads_client
 
 
 def format_output_value(value: Any) -> Any:
