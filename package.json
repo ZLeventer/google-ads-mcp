@@ -1,34 +1,21 @@
 {
   "name": "google-ads-mcp",
   "version": "1.0.0",
-  "description": "MCP server for Google Ads API — 20 tools for campaign management, keyword analysis, ad copy, audiences, geo/device performance, impression share, auction insights, and budget pacing",
+  "description": "MCP server for Google Ads API — 20 tools for campaigns, keywords, RSAs, assets, audiences, geo/device performance, impression share, auction insights, and budget pacing",
   "type": "module",
-  "license": "MIT",
-  "homepage": "https://github.com/ZLeventer/google-ads-mcp",
-  "keywords": [
-    "mcp",
-    "google-ads",
-    "ppc",
-    "sem",
-    "marketing",
-    "gaql",
-    "claude"
-  ],
-  "files": [
-    "dist",
-    "README.md"
-  ],
-  "bin": {
-    "google-ads-mcp": "dist/index.js"
-  },
+  "bin": { "google-ads-mcp": "dist/index.js" },
+  "files": ["dist", "README.md"],
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build",
     "start": "node dist/index.js",
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "prepare": "npm run build"
   },
+  "keywords": ["mcp", "google-ads", "ppc", "sem", "marketing", "gaql", "claude"],
+  "license": "MIT",
+  "homepage": "https://github.com/ZLeventer/google-ads-mcp",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.4",
+    "@modelcontextprotocol/sdk": "^1.10.0",
     "google-ads-api": "^23.0.0",
     "zod": "^3.23.8"
   },
@@ -36,7 +23,5 @@
     "@types/node": "^22.10.2",
     "typescript": "^5.7.2"
   },
-  "engines": {
-    "node": ">=20"
-  }
+  "engines": { "node": ">=20" }
 }
