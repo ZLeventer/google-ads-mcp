@@ -1,7 +1,7 @@
 {
   "$schema": "https://glama.ai/mcp/schema/v1/server.json",
   "name": "google-ads-mcp",
-  "description": "MCP server for Google Ads API — 20 tools for campaigns, keywords, RSAs, assets, audiences, geo/device performance, impression share, auction insights, and budget pacing.",
+  "description": "MCP server for Google Ads API — 22 tools for campaigns, keywords, RSAs, assets, audiences, geo/device performance, impression share, auction insights, and budget pacing.",
   "license": "MIT",
   "homepage": "https://github.com/ZLeventer/google-ads-mcp",
   "runtime": "node"
