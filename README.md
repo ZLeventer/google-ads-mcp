@@ -1,11 +1,42 @@
 # google-ads-mcp
 
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/@zleventer/google-ads-mcp.svg)](https://www.npmjs.com/package/@zleventer/google-ads-mcp)
+[![npm downloads](https://img.shields.io/npm/dm/@zleventer/google-ads-mcp.svg)](https://www.npmjs.com/package/@zleventer/google-ads-mcp)
 [![glama score](https://glama.ai/mcp/servers/ZLeventer/google-ads-mcp/badges/score.svg)](https://glama.ai/mcp/servers/ZLeventer/google-ads-mcp)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D20-green.svg)](https://nodejs.org)
+[![MCP](https://img.shields.io/badge/MCP-compatible-blueviolet)](https://modelcontextprotocol.io)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**A Model Context Protocol server for Google Ads — give Claude and other AI assistants direct access to your Google Ads account.**
+**MCP server for Google Ads — diagnose spend efficiency, impression share, and asset performance from Claude.**
 
-This is a community edition with B2B/agency-focused tooling that goes beyond the official `googleads/google-ads-mcp`. It adds RSA asset performance labels, auction insights, impression share analysis, geo/device splits, audience targeting inspection, and budget pacing — the tools you actually need to diagnose spend efficiency and optimize campaigns in conversation.
+22 tools across campaigns, keywords, RSAs, assets, audiences, geo/device splits, impression share, auction insights, and budget pacing — plus a raw GAQL escape hatch. Built for B2B paid search teams and agencies running real diagnosis, not just dashboard-style "list my campaigns" queries.
+
+---
+
+## Why this exists
+
+Most Google Ads MCP servers stop at "list campaigns + basic metrics." This one goes after the questions paid search teams actually ask: *which RSA assets are labeled LOW so I can replace them*, *which keywords burn budget with zero conversions*, *who am I losing impression share to in auction insights*, *what's my mobile vs. desktop CPA gap*, *which campaigns are budget-limited right now*. Those are the levers you pull to fix performance — and they're all first-class tools here.
+
+Differentiated from the official `googleads/google-ads-mcp`: ships RSA asset performance labels, auction insights, impression share analysis, geo/device splits, audience targeting inspection, and budget pacing.
+
+---
+
+## Example prompts
+
+Once installed, ask Claude things like:
+
+- *"What's my impression share vs competitors this month? Who am I most often losing to?"*
+- *"Show all RSA assets with LOW performance labels so I can replace them."*
+- *"Which keywords are spending the most with zero conversions in the last 30 days?"*
+- *"What's my mobile vs. desktop CPA difference across all campaigns?"*
+- *"Are any campaigns budget-limited right now? Show Lost IS (Budget)."*
+- *"List my remarketing audiences and tell me which ones are large enough to target in Search."*
+
+---
+
+## Demo
+
+> 🎥 *Walkthrough video coming soon — diagnosing wasted spend from Claude in under 60 seconds.*
 
 ---
 
@@ -151,17 +182,6 @@ docker run --rm \
 | `gads_auction_insights` | Impression share, overlap rate, outranking share vs competitors |
 | `gads_list_budgets` | All budgets: amount, delivery method, period, recommended budget |
 | `gads_budget_pacing` | Cost vs budget per campaign with utilization % |
-
----
-
-## Example prompts
-
-- "What's my impression share vs competitors this month? Who am I most often losing to?"
-- "Show me all RSA assets with LOW performance labels so I can replace them."
-- "Which keywords are spending the most with zero conversions in the last 30 days?"
-- "What's my mobile vs desktop CPA difference across all campaigns?"
-- "Are any campaigns budget-limited right now? Show me Lost IS (Budget)."
-- "List my remarketing audiences and tell me which ones are large enough to target in Search."
 
 ---
 
