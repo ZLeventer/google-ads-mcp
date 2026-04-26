@@ -1,7 +1,8 @@
 {
   "name": "@zleventer/google-ads-mcp",
-  "version": "1.0.0",
-  "description": "MCP server for Google Ads API — 20 tools for campaigns, keywords, RSAs, assets, audiences, geo/device performance, impression share, auction insights, and budget pacing",
+  "version": "1.0.1",
+  "mcpName": "io.github.ZLeventer/google-ads-mcp",
+  "description": "MCP server for Google Ads API — 22 tools for campaigns, keywords, RSAs, assets, audiences, geo/device performance, impression share, auction insights, and budget pacing",
   "type": "module",
   "bin": { "google-ads-mcp": "dist/index.js" },
   "files": ["dist", "README.md"],
