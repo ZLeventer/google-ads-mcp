@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.zleventer/google-ads-mcp",
   "title": "Google Ads",
-  "description": "MCP server for Google Ads — 22 tools for diagnosing spend efficiency, impression share, asset performance, and budget pacing. Covers campaigns, keywords, RSAs (with asset performance labels), audiences, geo/device splits, auction insights, and a raw GAQL escape hatch. Built for B2B paid search teams and agencies running real diagnosis, not dashboard-style queries.",
+  "description": "MCP server for Google Ads — 22 tools for spend diagnosis, impression share, and asset performance.",
   "repository": {
     "url": "https://github.com/ZLeventer/google-ads-mcp",
     "source": "github"
