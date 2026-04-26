@@ -1,0 +1,56 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.zleventer/google-ads-mcp",
+  "title": "Google Ads",
+  "description": "MCP server for Google Ads — 22 tools for diagnosing spend efficiency, impression share, asset performance, and budget pacing. Covers campaigns, keywords, RSAs (with asset performance labels), audiences, geo/device splits, auction insights, and a raw GAQL escape hatch. Built for B2B paid search teams and agencies running real diagnosis, not dashboard-style queries.",
+  "repository": {
+    "url": "https://github.com/ZLeventer/google-ads-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@zleventer/google-ads-mcp",
+      "version": "1.0.0",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        {
+          "name": "GOOGLE_ADS_DEVELOPER_TOKEN",
+          "description": "Google Ads developer token (apply at https://developers.google.com/google-ads/api/docs/get-started/dev-token)",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "GOOGLE_ADS_CLIENT_ID",
+          "description": "OAuth 2.0 client ID from Google Cloud Console",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "GOOGLE_ADS_CLIENT_SECRET",
+          "description": "OAuth 2.0 client secret from Google Cloud Console",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "GOOGLE_ADS_REFRESH_TOKEN",
+          "description": "OAuth 2.0 refresh token with https://www.googleapis.com/auth/adwords scope",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "GOOGLE_ADS_CUSTOMER_ID",
+          "description": "Default Google Ads customer ID (numeric, no dashes). Can be overridden per tool call.",
+          "isRequired": true
+        },
+        {
+          "name": "GOOGLE_ADS_LOGIN_CUSTOMER_ID",
+          "description": "Manager (MCC) account ID — required only if accessing accounts under an MCC",
+          "isRequired": false
+        }
+      ]
+    }
+  ]
+}
