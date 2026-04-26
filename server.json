@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.zleventer/google-ads-mcp",
+  "name": "io.github.ZLeventer/google-ads-mcp",
   "title": "Google Ads",
   "description": "MCP server for Google Ads — 22 tools for spend diagnosis, impression share, and asset performance.",
   "repository": {
